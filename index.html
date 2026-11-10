@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackson Baker</title>
+  <meta name="description" content="Jackson Baker, software and data engineer in Memphis, TN. API integrations, ETL pipelines, and full-stack data applications." />
+  <meta name="theme-color" content="#f2efe6" />
+  <meta property="og:title" content="Jackson Baker" />
+  <meta property="og:description" content="Software and data engineer in Memphis, TN." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hud">
+    <a href="#top" class="hud-logo px" aria-label="Back to top">JB</a>
+    <nav class="hud-nav px" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </nav>
+    <div class="hud-right px">
+      <span class="progress" id="progress" aria-hidden="true"></span>
+      <span class="clock" id="clock">Memphis</span>
+      <button type="button" class="sfx" id="sfx" aria-pressed="false">SFX OFF</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- ═════════════ Snake ═════════════ -->
+    <aside class="side" aria-label="Snake mini-game">
+      <div class="snake box">
+        <header class="panel-head px"><span>Snake</span><span>HI <span id="hi">000</span></span></header>
+        <div class="snake-screen">
+          <canvas id="snake" tabindex="0" aria-label="Snake game. Click or press Enter to play, arrow keys or WASD to steer."></canvas>
+          <div class="snake-msg px" id="snake-msg"><span id="snake-title">Snake</span><span class="blink" id="snake-sub">Click to play</span></div>
+        </div>
+        <footer class="snake-foot px">
+          <span>Score <b id="score">000</b></span>
+          <span class="snake-keys">↑↓←→ / WASD</span>
+        </footer>
+      </div>
+      <p class="side-note px">Esc to pause</p>
+    </aside>
+
+    <main id="top">
+      <!-- ═════════════ Intro ═════════════ -->
+      <section class="hero">
+        <h1 class="sr-only">Jackson Baker</h1>
+        <canvas id="logo" class="logo" aria-hidden="true"></canvas>
+        <p class="status px"><span class="sq"></span>Technical Analyst at Kappa Delta</p>
+        <p class="lede">
+          Software and data engineer in Memphis. I build API integrations, durable data pipelines,
+          and full-stack data applications across Salesforce, Snowflake, AWS, and Domo.
+        </p>
+        <div class="links">
+          <a class="btn px" href="https://github.com/porterbaker" target="_blank" rel="noopener" data-sfx>GitHub ↗</a>
+          <a class="btn px" href="https://linkedin.com/in/jacksonpbaker" target="_blank" rel="noopener" data-sfx>LinkedIn ↗</a>
+          <button type="button" class="btn px" data-copy="jacksonpb@yahoo.com" data-sfx>Copy email</button>
+        </div>
+      </section>
+
+      <section class="block about" aria-label="About">
+        <p>
+          Right now I'm the only engineer at a national organization with <b>160+ chapters</b> and
+          <b>25,000+ active members</b>. I run scheduled Lambda pipelines with retries and alerting,
+          rebuild vendor connectors, and reverse-engineer undocumented APIs. Before that I worked in sales
+          analytics at Orgill and on SAP security and SQL Server at International Paper. I'm also finishing
+          a Master of Applied Data Science at Mississippi State.
+        </p>
+      </section>
+
+      <!-- ═════════════ Work ═════════════ -->
+      <section class="block" id="work">
+        <h2 class="label px"><span>01</span>Work</h2>
+
+        <article class="role">
+          <div class="when px">May 2026 —<br /> Present</div>
+          <div class="what">
+            <h3 class="px">Technical Analyst</h3>
+            <p class="at">Kappa Delta Sorority · Data engineering &amp; full-stack development</p>
+            <ul>
+              <li>Sole engineer building full-stack applications and data pipelines across AWS, Domo (Pro-Code/App Studio), and Salesforce for <b>160+</b> chapters and <b>25,000+</b> active members.</li>
+              <li>Built a fully automated SurveyMonkey → AWS Lambda → Domo pipeline: <b>300,000+</b> historical responses across five years, plus <b>100–200</b> live records a day.</li>
+              <li>Serverless Lambda pipelines on cron schedules with retries and backoff, failure alerting, and error logging to S3.</li>
+              <li>Rebuilt Domo's native Salesforce integration from scratch and reverse-engineered undocumented Domo API endpoints to automate user administration for <b>2,000+</b> users from Salesforce Flows.</li>
+              <li>Remediated <b>20–30</b> legacy Domo ETL workflows (merge/append instead of full reloads, deduplicated datasets, fixed schedules) and <b>cut Domo credit consumption in half</b>.</li>
+              <li>Designed a New Member Intake application that automates registering <b>5,000–10,000</b> initiates each semester, saving <b>2–3 hours</b> for each of 166 chapter presidents.</li>
+              <li>Executive dashboards, data-visibility tools, and Domo Pro-Code apps in HTML, JavaScript, and CSS.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="when px">Aug 2025 —<br /> May 2026</div>
+          <div class="what">
+            <h3 class="px">Sr. Sales Data Analyst</h3>
+            <p class="at">Orgill · Business intelligence</p>
+            <ul>
+              <li>Identified <b>$70–120M</b> in incremental revenue opportunities through customer behavior analysis; directly responsible for <b>$10–20M</b> in sales through a targeted Valspar/Sherwin-Williams campaign.</li>
+              <li>Designed and deployed Orgill's first production customer segmentation model: feature-engineered RFM segmentation for <b>15,000+</b> customer locations and <b>700+</b> sales users inside Salesforce.</li>
+              <li>Built the feature pipeline in Salesforce Data Cloud and Snowflake SQL, and a production ETL from Snowflake into Salesforce standard objects via the REST API.</li>
+              <li>Built <b>20+</b> Tableau dashboards for Sales, Marketing, and Finance executives while maintaining <b>400+</b>.</li>
+              <li>Reported directly to the EVP and VP of Sales as the sole liaison between Sales and Technology.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="when px">May 2024 —<br /> Aug 2025</div>
+          <div class="what">
+            <h3 class="px">IT Business Specialist</h3>
+            <p class="at">International Paper · SAP security</p>
+            <ul>
+              <li>Managed data governance and access control for SAP systems supporting <b>20,000+</b> global users.</li>
+              <li>Led a cleanup and role-optimization initiative that eliminated <b>8,500+</b> obsolete SAP security roles.</li>
+              <li>Supported the BlueYonder TMS/LP logistics platform rollout, used by <b>100+</b> global carriers.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="when px">May 2023 —<br /> Aug 2023</div>
+          <div class="what">
+            <h3 class="px">IT Intern</h3>
+            <p class="at">International Paper · Database management, MSSQL</p>
+            <ul>
+              <li>Built an automated SQL Server Agent job scheduler in PowerShell, improving reliability across <b>130+</b> production database servers. Received a full-time return offer.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ═════════════ Projects ═════════════ -->
+      <section class="block" id="projects">
+        <h2 class="label px"><span>02</span>Projects <a class="label-aside" href="https://github.com/porterbaker?tab=repositories" target="_blank" rel="noopener">Live from GitHub ↗</a></h2>
+        <div id="featured" class="carts" aria-live="polite"></div>
+        <div id="more-wrap" class="more" hidden>
+          <p class="px more-title">More on GitHub</p>
+          <ul id="more" class="more-list"></ul>
+        </div>
+        <noscript><p><a href="https://github.com/porterbaker?tab=repositories">See all projects on GitHub →</a></p></noscript>
+      </section>
+
+      <!-- ═════════════ Skills ═════════════ -->
+      <section class="block" id="skills">
+        <h2 class="label px"><span>03</span>Skills</h2>
+        <dl class="skills">
+          <dt class="px">Languages</dt>
+          <dd><span>Python</span><span>SQL</span><span>T-SQL</span><span>Snowflake SQL</span><span>Apex</span><span>JavaScript</span><span>Rust</span><span>PowerShell</span><span>HTML/CSS</span></dd>
+          <dt class="px">Integration</dt>
+          <dd><span>Salesforce REST &amp; Bulk APIs</span><span>OAuth 2.0 (Web Server, JWT Bearer)</span><span>REST API ingestion</span></dd>
+          <dt class="px">Cloud</dt>
+          <dd><span>AWS Lambda</span><span>EventBridge</span><span>S3</span><span>Secrets Manager</span><span>CloudWatch</span><span>Snowflake</span><span>SQL Server</span><span>Salesforce Data Cloud</span><span>LWC</span><span>Flows</span><span>Domo</span></dd>
+          <dt class="px">Data</dt>
+          <dd><span>ETL/ELT pipelines</span><span>Serverless automation</span><span>Data modeling</span><span>Stored procedures</span><span>dbt</span><span>Polars</span><span>DuckDB</span><span>Parquet</span><span>pytest</span><span>Git</span></dd>
+          <dt class="px">BI</dt>
+          <dd><span>Tableau (Desktop Specialist)</span><span>Domo</span><span>Power BI</span></dd>
+          <dt class="px">Modeling</dt>
+          <dd><span>LightGBM</span><span>XGBoost</span><span>Clustering</span><span>Feature engineering</span><span>Time-series forecasting</span><span>Walk-forward validation</span><span>Bayesian hierarchical models</span></dd>
+        </dl>
+      </section>
+
+      <!-- ═════════════ Education ═════════════ -->
+      <section class="block" id="education">
+        <h2 class="label px"><span>04</span>Education</h2>
+        <article class="role">
+          <div class="when px">2025 —<br /> 2027</div>
+          <div class="what">
+            <h3 class="px">Mississippi State University</h3>
+            <p class="at">Master of Applied Data Science · GPA <b>4.0</b></p>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when px">2021 —<br /> 2024</div>
+          <div class="what">
+            <h3 class="px">University of Mississippi</h3>
+            <p class="at">B.S. Computer Science, Data Science emphasis · GPA <b>3.7</b></p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="foot px">
+    <span>© <span class="year">2026</span> Jackson Baker</span>
+    <span>Made by hand in Memphis</span>
+    <a href="#top">↑ Top</a>
+  </footer>
+
+  <div class="toast px" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
